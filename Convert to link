@@ -1,0 +1,8 @@
+def convert_html_to_link(html_code):
+  # Extract the src attribute from the HTML code
+  src = re.search(r'src="(.+?)"', html_code).group(1)
+  
+  # Create the embeddable link using the src attribute
+  link = f"<iframe src='{src}'></iframe>"
+  
+  return link
